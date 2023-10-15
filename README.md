@@ -30,8 +30,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 
-https://github.com/lemonshark05/Dashboard/assets/100770743/59773386-16a6-4187-ac9e-4ecfc64bca35
-
+https://github.com/lemonshark05/Dashboard/assets/100770743/339f436e-4999-4a66-88ef-203951da7dde
 
 
 ## Notes
