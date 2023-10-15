@@ -1,0 +1,204 @@
+:root {
+  background-attachment: fixed;
+  background-image: url(/src/assets/bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  margin: 0;
+}
+
+div {
+  display: block;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.App {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: Avenir,Century Gothic,sans-serif;
+  font-size: calc(10px + 2vmin);
+  font-style: normal;
+  font-weight: 100;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.App-sidebar {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: hsla(0,0%,100%,.1);
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  padding-left: 20px;
+  position: fixed;
+  top: 0;
+  width: 250px;
+}
+
+.App-page {
+  width: 100%;
+  padding-left: 300px;
+  top: 0;
+}
+
+.App-row {
+  flex-direction: row;
+  gap: 10px 20px;
+  padding-right: 40px;
+}
+
+.App-row, .container {
+  align-items: center;
+  display: flex;
+}
+
+.List {
+  width: 100%;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: hsla(0,0%,100%,.092);
+  box-shadow: 0 15px 25px hsla(0,2%,50%,.154);
+  padding: 20px 20px 40px;
+}
+
+.Card, .List {
+  border-radius: 24px;
+  font-size: medium;
+  text-align: center;
+}
+
+.Card {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background-color: hsla(0,0%,100%,.1);
+  box-shadow: 0 15px 25px hsla(0,2%,50%,.2);
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.Logo {
+  display: flex;
+  padding-right: 5px;
+  padding-top: 25px;
+  height: 15%;
+  max-width: 15%; 
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.filters {
+  display: flex;
+  margin-left: 150px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.phaseFilter {
+  margin-right: 10px;
+}
+
+.dateFilter {
+  margin-right: 18px;
+}
+
+.btn {
+  background-color: #483d8b;
+  color: #fff;
+  font-family: Avenir;
+}
+
+.table table {
+  width: 100%;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.Menu-item {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 35px;
+}
+
+table {
+  border-spacing: 10px;
+  /* text-align: center; */
+  border-color: gray;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  margin-right: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+a {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex: 0 1 auto;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+}
