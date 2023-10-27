@@ -4,7 +4,9 @@ import Card from './components/Card';
 import DataList from './components/DataList';
 import MoonPhaseChart from './components/MoonPhaseChart';
 import TempChart from './components/TempChart';
+import LoadDetails from './components/LoadDetails';
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() { 
   const [data, setData] = useState([]);
@@ -33,9 +35,13 @@ function App() {
         result.days.map((day) => ({
           date: day.datetime,
           temperature: day.temp,
+          moonrise: day.moonrise,
+          moonset: day.moonset,
           time: day.moonrise,
           phase: getMoonPhaseEmoji(day.moonphase),
           moonphase: day.moonphase,
+          visibility: day.visibility,
+          description: day.description,
           link: <a href={`/${day.datetime}`}> 🔗 </a>,
         }))
       );
@@ -47,27 +53,40 @@ function App() {
     <div className="App">
       <Sidebar />
       <div className="App-page">
-        <div className="App-row">
-          <Card title="New York" content="New York, USA" />
-          <Card title="Low Temp" content="43.9 °F" />
-          <Card title="14:25:39" content="Moon Rise" />
-          <Card title="🌒" content="Moon Phase" />
-          {/* More cards here */}
-        </div>
-        <div className="App-row">
-          <DataList data={data} />
-          <div class="Charts">
-            <div class="Chart">
-              <MoonPhaseChart data={data} />
-            </div>
-            <div class="Chart">
-              <TempChart data={data} />
-            </div>
-          </div>
-        </div>
+        <Router>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <div className="App-row">
+                  <Card title="New York" content="New York, USA" />
+                  <Card title="Low Temp" content="43.9 °F" />
+                  <Card title="14:25:39" content="Moon Rise" />
+                  <Card title="🌒" content="Moon Phase" />
+                  {/* More cards here */}
+                </div>
+                <div className="App-row">
+                  <DataList data={data} />
+                  <div className="Charts">
+                    <div className="Chart">
+                      <MoonPhaseChart data={data} />
+                    </div>
+                    <div className="Chart">
+                      <TempChart data={data} />
+                    </div>
+                  </div>
+                </div>
+              </>
+            } />
+            <Route path="/:day" element={
+              <div className="Details">
+                <LoadDetails data={data} />
+              </div>
+            } />
+          </Routes>
+        </Router>
       </div>
     </div>
-  )
+  );  
 }
 
 export default App
