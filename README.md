@@ -1,8 +1,8 @@
-# Web Development Project 5 - *Data Dashboard*
+# Web Development Project 6 - *Dashboard*
 
 Submitted by: **Zhimin**
 
-This web app: **The dashboard view contains summary statistics and a list view of the data that can be searched and filtered. The dashboard should tell an interesting story about the data and spark the user’s curiosity, inviting them to learn more.**
+This web app: **Add data visualizations to the dashboard view and then construct a detail view containing more info related to a given data point. You will implement dynamic links using React Router, giving each data point listed on your dashboard a unique link to a corresponding detail view.**
 
 Time spent: **6** hours spent in total
 
@@ -10,28 +10,22 @@ Time spent: **6** hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **The list displays a list of data fetched using an API call**
-- [x] **Data uses the useEffect React hook and async/await syntax**
-- [x] **The app dashboard includes at least three summary statistics about the data such as**
-  - [x] *Location, Moon Rise time, and Moon Phase*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-- [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
+
 
 The following **optional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously
-- [x] Filters use different input types such as a text input, a selection, or a slider
-- [x] The user can enter specific bounds for filter values
+- [x] The site's customized dashboard contains more content that explains what is interesting about the data
+- [x] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
-
+* [x] Optimize search input results
 ## Video Walkthrough
 
-
-https://github.com/lemonshark05/Dashboard/assets/100770743/339f436e-4999-4a66-88ef-203951da7dde
-
+https://github.com/lemonshark05/Dashboard/assets/100770743/81ff20d5-aeaf-4fdb-b19d-2589d41c0a43
 
 ## Notes
 
