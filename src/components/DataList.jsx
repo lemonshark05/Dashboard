@@ -11,15 +11,13 @@ const DataList = ({ data }) => {
     if (searchTerm !== '') {
       tempData = tempData.filter(row => 
         Object.values(row).some(val => 
-          val.toString().toLowerCase().includes(searchTerm.toLowerCase())
+          val ? val.toString().toLowerCase().includes(searchTerm.toLowerCase()) : false
         )
       );
     }
 
     if (moonPhase !== 1.0) {
-      tempData = tempData.filter(row => {
-        return row.phaseValue < moonPhase;
-      });
+      tempData = tempData.filter(row => row.phaseValue < moonPhase);
     }
 
     // alert("Filtered data: "+moonPhase + JSON.stringify(tempData)); // Alert filtered data
@@ -65,15 +63,17 @@ const DataList = ({ data }) => {
               <th>Temperature</th>
               <th>Time</th>
               <th>Phase</th>
+              <th>Detail</th>
             </tr>
           </thead>
           <tbody>
             {filteredData.map((row, index) => (
               <tr key={index}>
                 <td>{row.date}</td>
-                <td>{row.temperature}</td>
+                <td>{row.temperature} °F</td>
                 <td>{row.time}</td>
                 <td>{row.phase}</td>
+                <td>{row.link}</td>
               </tr>
             ))}
           </tbody>

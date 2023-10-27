@@ -135,8 +135,8 @@ img {
 
 .filters {
   display: flex;
-  margin-left: 150px;
-  padding-bottom: 20px;
+  margin-left: 5px;
+  padding-bottom: 10px;
   padding-top: 10px;
 }
 
@@ -181,6 +181,10 @@ thead {
   border-color: inherit;
 }
 
+th, td {
+  white-space: nowrap;
+}
+
 tr {
   display: table-row;
   vertical-align: inherit;
@@ -196,9 +200,43 @@ th {
 a {
   align-items: center;
   color: #fff;
-  display: flex;
-  flex: 0 1 auto;
-  margin: 0;
-  position: relative;
   text-decoration: none;
+}
+
+.Card, .List {
+  border-radius: 24px;
+  font-size: medium;
+  text-align: center;
+}
+
+.List {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: hsla(0,0%,100%,.092);
+  box-shadow: 0 15px 25px hsla(0,2%,50%,.154);
+  padding: 20px 20px 40px;
+  width: 400px;
+}
+
+.Chart {
+  margin-bottom: 10px;
+  padding-left: 0;
+  padding-top: 20px;
+  text-align: center;
+  width: 400px;
+}
+
+.Chart, .Details {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: hsla(0,0%,100%,.092);
+  border-radius: 24px;
+  box-shadow: 0 15px 25px hsla(0,2%,50%,.154);
+  font-size: medium;
+}
+
+.Details {
+  padding: 20px 20px 40px;
+  text-align: left;
+  width: 800px;
 }
